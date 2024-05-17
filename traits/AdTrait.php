@@ -2,7 +2,7 @@
 
 trait AdTrait
 {
-    private  $adCon;
+    private $adCon;
     private $adServer;
     private $dn;
     private $result;
@@ -19,7 +19,7 @@ trait AdTrait
         $this->dn = $_ENV['LDAP_BASE_DN'];
     }
 
-    private function  adConnect($username, $password)
+    private function adConnect($username, $password)
     {
         $this->adCon = ldap_connect($this->adServer);
 
@@ -63,7 +63,7 @@ trait AdTrait
         return ldap_get_entries($conn, $result);
     }
 
-    private function unBindAd($conn)
+    private function adUnBind($conn)
     {
         ldap_unbind($conn);
     }

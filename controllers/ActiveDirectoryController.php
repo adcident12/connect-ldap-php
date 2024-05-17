@@ -29,7 +29,7 @@ class ActiveDirectoryController
         $this->password = $password;
     }
 
-    public function  getEntries()
+    public function getEntries()
     {
         $returnData = [];
         if ($this->validator() && $this->validator()['status'] === false) {
